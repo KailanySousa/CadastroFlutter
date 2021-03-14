@@ -1,4 +1,5 @@
 import 'package:crud/components/user_tile.dart';
+import 'package:crud/models/user.dart';
 import 'package:crud/provider/users.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +15,14 @@ class UserList extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: () {},
+            onPressed: () {
+              users.put(
+                User(
+                    name: 'Gabriela',
+                    email: 'gabriela@gmail.com',
+                    avatarUrl: ''),
+              );
+            },
           )
         ],
       ),
