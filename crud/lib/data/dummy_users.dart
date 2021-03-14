@@ -18,5 +18,5 @@ const DUMMY_USERS = {
       name: 'Maria',
       email: 'maria@gmail.com',
       avatarUrl:
-          'https://cdn.pixabay.com/photo/2021/03/01/08/56/woman-6059190__340.png')
+          'https://cdn.pixabay.com/photo/2021/03/01/08/56/woman-6059190__340.png'),
 };

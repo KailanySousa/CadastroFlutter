@@ -1,11 +1,12 @@
 import 'package:crud/components/user_tile.dart';
-import 'package:crud/data/dummy_users.dart';
+import 'package:crud/provider/users.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class UserList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final users = {...DUMMY_USERS};
+    final Users users = Provider.of(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -18,9 +19,9 @@ class UserList extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        itemBuilder: (cxt, i) => UserTile(users.values.elementAt(i)),
+        itemBuilder: (cxt, i) => UserTile(users.byIndex(i)),
         itemCount: users
-            .length, //carrega a lista de acordo com a quantidade a ser mostrada
+            .count, //carrega a lista de acordo com a quantidade a ser mostrada
       ),
     );
   }
